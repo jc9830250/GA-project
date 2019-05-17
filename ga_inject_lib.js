@@ -54,10 +54,10 @@ if (false) {
  * @returns {undefined}
  */
 window.ga_setup = function (_callback) {
-	_console_log("1. 在插入GA之前");
+	//_console_log("1. 在插入GA之前");
 	
     $.getScript("https://www.google-analytics.com/analytics.js", function () {
-		_console_log("2. 插入GA了");
+		//_console_log("2. 插入GA了");
         
         var _user = get_user_id();
         ga('create', GA_TRACE_CODE, {'userId': _user});  
@@ -66,10 +66,10 @@ window.ga_setup = function (_callback) {
         ga('set', 'userId', _user); // 使用已登入的 user_id 設定 User-ID。
         ga('set', 'dimension1', _user);
 		
-		_console_log("3. GA設定了");
+		//_console_log("3. GA設定了");
         
         auto_set_user_id(function () {
-			_console_log("4. User ID設定好了");
+			//_console_log("4. User ID設定好了");
 			
             /**
              * 初始化載入
@@ -148,10 +148,10 @@ window.auto_set_user_id = function(_callback){
 			
             USER_IP = String(data['ip']);
             set_user_id(USER_IP);    
-            _console_log("Set user id in ip: " + USER_IP);
+           // _console_log("Set user id in ip: " + USER_IP);
             if (typeof(_callback) === "function") {
 				
-				_console_log("3.4. ok");
+				//_console_log("3.4. ok");
                 _callback();
             }
         });
