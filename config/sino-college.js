@@ -8,15 +8,7 @@ GA_TRACE_CODE = "UA-107585606-1";
 
 var _local_debug = false;
 
-if (_local_debug === true) {
-    CSS_URL = "https://localhost/GA-project/config/nccuir.lib.nccu.edu.tw.css";
-    LIB_URL = "https://localhost/GA-project/ga_inject_lib.js";
-    console.log("[LOCAL TEST MODE]");
-}
-else {
-    CSS_URL = "https://billxu0521.github.io/GA-project/config/nccuir.lib.nccu.edu.tw.css";
     LIB_URL = "https://billxu0521.github.io/GA-project/ga_inject_lib.js";
-}
 
 
 var exec = function () {
