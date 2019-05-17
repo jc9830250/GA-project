@@ -31,7 +31,6 @@ var exec = function () {
 // --------------------------------------
 
 $(function () {
-    console.log("123");
     $.getScript(LIB_URL, function () {
         ga_setup(function () {
             exec();
