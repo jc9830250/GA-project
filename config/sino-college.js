@@ -8,8 +8,8 @@ GA_TRACE_CODE = "UA-140332633-1";
 
 var _local_debug = false;
 
-    LIB_URL = "https://github.com/jc9830250/GA-project/blob/master/ga_inject_lib.js";
-    CSS_URL = "https://github.com/jc9830250/GA-project/blob/master/config/sino-college.css";
+    LIB_URL = "https://jc9830250.github.io/ccstw-GA-project/ga_inject_lib.js";
+    CSS_URL = "https://jc9830250.github.io/ccstw-GA-project/config/sino-college.css";
 var exec = function () {
     auto_set_user_id();   
 
