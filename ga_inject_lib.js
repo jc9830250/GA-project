@@ -74,7 +74,7 @@ window.ga_setup = function (_callback) {
             /**
              * 初始化載入
              */
-            _console_log("Google analytics injected. User: " + _user);
+           // _console_log("Google analytics injected. User: " + _user);
 
             if (typeof(_callback) === "function") {
                 $(function () {
