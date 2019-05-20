@@ -22,7 +22,7 @@ var exec = function () {
         return _ele.text();});
     ga_submit_event(".vlog-search-form", "站內搜尋", function (_input) { //搜尋
         return _input.serialize();});
-    ga_mouse_click_event("a[rel="noopener"]","關於"); //關於 
+    ga_mouse_click_event("a[rel='noopener']","關於"); //關於 
      ga_mouse_click_event(".vlog-logo","首頁"); //首頁 
     ga_mouse_click_event(".entry-header", "點擊最新公告", function (_ele) { //點擊公告
         return _ele.find(".mouse_clickClick").text();});
