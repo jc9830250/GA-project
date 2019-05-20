@@ -15,17 +15,28 @@ var exec = function () {
 
     //偵測語法
     //ga_mouse_click_event("選擇要素","準則");
-    ga_mouse_click_event(".btn","Click");
-    ga_mouse_click_event(".btn gsc-search-button gsc-search-button-v2","Click"); //GOOGLE站內搜尋
-    ga_mouse_click_event(".btn scholar_href","Click");
-    ga_mouse_click_event(".btn mouse_clickClick","Click"); //首頁「統計資訊-更多...>>」、「學術動態-更多...>>」…首頁的眾多滑鼠事件
-    ga_mouse_click_event(".btn scholar_href mouse_clickClick","Click");
-    ga_mouse_click_event(".btn scholar_href","Click");
-    ga_mouse_click_event(".btn btn-info btn-lg mouse_clickClick","Click"); //首頁「研究/學術產出」搜尋按鈕
-    ga_mouse_click_event("[href]", "Click", function (_ele) {
+   
+    ga_mouse_click_event(".fa-item-image mouse_clickClick","觀看影片",function (_ele) { //影片
+        return _ele.attr("title");}); //影片
+    ga_mouse_click_event(".mouse_clickClick", "點擊banner", function (_ele) { //首頁、最新消息、精選課程、影片總覽、關於
         return _ele.text();});
-    ga_submit_event("form", "Form", function (_ele) {
+    ga_submit_event(".vlog-search-form", "站內搜尋", function (_input) { //搜尋
+        return _input.serialize();});
+    ga_mouse_click_event("a[rel="noopener"]","關於"); //關於 
+     ga_mouse_click_event(".vlog-logo","首頁"); //首頁 
+    ga_mouse_click_event(".entry-header", "點擊最新公告", function (_ele) { //點擊公告
+        return _ele.find(".mouse_clickClick").text();});
+    ga_mouse_click_event(".entry-image", "點擊最新公告", function (_ele) { //點擊公告
+        return _ele.find(".mouse_clickClick").attr("title");});
+     ga_mouse_click_event(".vlog-cats > .entry-image > a", "精選課程影片", function (_ele) { //精選課程影片
+        return _ele.attr("title");});
+     ga_mouse_click_event(".entry-title > a", "精選課程影片", function (_ele) { //精選課程影片
         return _ele.text();});
+     ga_mouse_click_event(".series-text", "播放清單影片", function (_ele) { //播放清單影片
+        return _ele.text();});
+     ga_mouse_click_event(".category-text", "類別", function (_ele) { //類別
+        return _ele.text();});
+   
 };
 
 // --------------------------------------
