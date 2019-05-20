@@ -28,7 +28,7 @@ var exec = function () {
         return _ele.find(".mouse_clickClick").text();});
     ga_mouse_click_event(".entry-image", "點擊最新公告", function (_ele) { //點擊公告
         return _ele.find(".mouse_clickClick").attr("title");});
-     ga_mouse_click_event(".vlog-cats > .entry-image > a", "精選課程影片", function (_ele) { //精選課程影片
+     ga_mouse_click_event(".entry-image > a", "精選課程影片", function (_ele) { //精選課程影片
         return _ele.attr("title");});
      ga_mouse_click_event(".entry-title > a", "精選課程影片", function (_ele) { //精選課程影片
         return _ele.text();});
